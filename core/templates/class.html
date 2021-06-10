@@ -1,0 +1,44 @@
+{% load static %}
+<section class="class section" id="class">
+    <div class="container">
+         <div class="row">
+
+                 <div class="col-lg-12 col-12 text-center mb-5">
+                     <h6 data-aos="fade-up">Busque A um Corpo Perfeito</h6>
+
+                     <h2 data-aos="fade-up" data-aos-delay="200">Our Training Classes</h2>
+                    </div>
+                {% for classe in Classes %}
+                 <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                     <div class="class-thumb">
+                         <img src="{{classe.foto.thumb.url}}" class="img-fluid" alt="Class">
+
+                         <div class="class-info">
+                             <h3 class="mb-1">{{classe.titulo}}</h3>
+
+                             <span><strong>Trainador(a)</strong> - {{classe.treinador}}</span>
+
+                             <span class="class-price">{{classe.preco}}</span>
+
+                             <p class="mt-3">{{classe.especialidade}}</p>
+                         </div>
+                     </div>
+                 </div>
+
+
+                <!-- <div class="container" >
+                     {% if messages %}
+                        {% for m in messages %}
+                           <div class="alert alert-{{m.tags}}">
+                                <button type="button" class="close" data-dismiss="alert" ></button>
+                                <strong>{{m}}</strong>   
+                                
+                           </div>     
+                        {% endfor %}
+                     {% endif %}
+                 </div>
+                {% endfor %} -->
+         </div>  
+    </div>
+</section>
+
