@@ -7,7 +7,7 @@
                     <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200">Contate - Nos</h2>
 
                     <form action="{% url 'index' %}" method="POST"   id="contato" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
-                        {% csrf_token %}
+                        <!-- {% csrf_token %} -->
                         <input type="text" class="form-control" name="nome" id="nome"  placeholder="Nome">
 
                         <input type="email" class="form-control" name="email" id="email" placeholder="Email">
